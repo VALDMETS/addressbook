@@ -41,6 +41,7 @@ function firstPageButton() {
     },
     error: function () {
       console.log('something is mad');
+      location.hash = 'error';
       $('main').empty().append(`
         <h3>Oh no! Something was incorrect with your login.</h3>
         <input type="button" id="loginreturn" value="Return to Login">

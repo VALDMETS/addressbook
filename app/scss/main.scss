@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  background-color: #E4E5F6;
+}
+.leftbox {
+  display: block;
+  width: 35%;
+  float: left;
+}
+.sidebar {
+  padding-top: 20px;
+}
+a {
+  padding-top: 8px;
+  display: block;
+  color: blue;
+  text-decoration: underline;
+}
+.newperson {
+  input {
+    display: block;
+  }
+}
+.personwindow {
+  display: block;
+  width: 65%;
+  float: left;
+}

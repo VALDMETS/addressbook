@@ -11,14 +11,17 @@ function renderAddressPage () {
 
   console.log('got em');
   $('main').empty().append(`
-    <div class="newperson">
-      <input type="text" id="newname" value="" placeholder="Full Name">
-      <input type="text" id="newnick" value="" placeholder="Nickname">
-      <input type="text" id="newemail" value="" placeholder="Email Address">
-      <input type="text" id="newphone" value="" placeholder="Phone Number">
-      <input type="button" id="submitnewperson" value="SUBMIT">
-    </div>
-    <section class="sidebar">
+    <section class="leftbox">
+      <div class="newperson">
+        <h3>New Entry</h3>
+        <input type="text" id="newname" value="" placeholder="Full Name">
+        <input type="text" id="newnick" value="" placeholder="Nickname">
+        <input type="text" id="newemail" value="" placeholder="Email Address">
+        <input type="text" id="newphone" value="" placeholder="Phone Number">
+        <input type="button" id="submitnewperson" value="SUBMIT">
+      </div>
+      <section class="sidebar">
+      </section>
     </section>
     <section class="personwindow">
     </section>
@@ -70,7 +73,10 @@ function renderAddressPage () {
         Authorization: 'Kinvey ' + user.authToken
       },
       success: function () {
-        console.log('I Live');
+        $('#newname').val('');
+        $('#newnick').val('');
+        $('#newemail').val('');
+        $('#newphone').val('');
       },
       error: function () {
         console.log('I Die');
